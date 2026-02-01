@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>There Is Nothing There — Psychological Horror</title>
+  <meta name="description" content="A slow-burn psychological horror about returning to a familiar place that no longer agrees with your memory." />
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <meta property="og:title" content="There Is Nothing There" />
+  <meta property="og:description" content="Return. Repeat. Notice what changes." />
+  <meta property="og:type" content="website" />
+  <!-- Optional: add og:image once you have a clean 1200x630 -->
+  <!-- <meta property="og:image" content="https://YOURNAME.github.io/REPO/assets/og.png" /> -->
+
+  <style>
+    :root{
+      --bg:#07080b;
+      --panel:#0c0f16;
+      --text:#e8e8ee;
+      --muted:#a7a9b6;
+      --line:rgba(255,255,255,.10);
+      --accent:#f2d46b; /* your yellow subtitle vibe */
+      --shadow: 0 20px 70px rgba(0,0,0,.55);
+      --radius:18px;
+      --max: 980px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 20% 0%, rgba(255,255,255,.06), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(242,212,107,.06), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 70px;}
+    .top{
+      display:flex; gap:18px; align-items:center; justify-content:space-between;
+      padding:10px 0 22px;
+      border-bottom:1px solid var(--line);
+    }
+    .brand{display:flex; flex-direction:column; gap:6px;}
+    .title{font-size:24px; letter-spacing:.4px;}
+    .sub{color:var(--muted); font-size:13px; max-width:56ch;}
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      text-decoration:none;
+      transition:transform .12s ease, background .12s ease, border-color .12s ease;
+      font-size:14px;
+      user-select:none;
+    }
+    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.18)}
+    .btnPrimary{
+      background:rgba(242,212,107,.14);
+      border-color:rgba(242,212,107,.35);
+    }
+    .btnPrimary:hover{background:rgba(242,212,107,.18); border-color:rgba(242,212,107,.5)}
+    .hero{padding:34px 0 10px; display:grid; gap:18px;}
+    .hook{
+      font-size:34px;
+      letter-spacing:.2px;
+      line-height:1.12;
+      margin:0;
+    }
+    .hook span{color:var(--accent)}
+    .lead{
+      color:var(--muted);
+      font-size:16px;
+      max-width:72ch;
+      margin:0;
+    }
+    .panel{
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .video{
+      position:relative;
+      padding-top:56.25%; /* 16:9 */
+      background:#000;
+    }
+    .video iframe, .video video{
+      position:absolute; inset:0; width:100%; height:100%;
+      border:0;
+    }
+    .bar{
+      display:flex; gap:10px; flex-wrap:wrap;
+      padding:14px;
+      border-top:1px solid var(--line);
+      align-items:center;
+      justify-content:space-between;
+    }
+    .bar .mini{color:var(--muted); font-size:13px;}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+      margin-top:18px;
+    }
+    .card{
+      grid-column: span 6;
+      padding:16px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.02);
+    }
+    .card h3{margin:0 0 8px; font-size:15px; letter-spacing:.2px;}
+    .card p{margin:0; color:var(--muted); font-size:14px;}
+    .shots{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:10px;
+    }
+    .shot{
+      grid-column: span 6;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:#000;
+      aspect-ratio: 16 / 9;
+    }
+    .shot img{width:100%; height:100%; object-fit:cover; display:block;}
+    .footer{
+      margin-top:26px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .fine{max-width:70ch}
+    @media (max-width: 760px){
+      .hook{font-size:28px}
+      .card{grid-column: span 12}
+      .shot{grid-column: span 12}
+      .ctaRow{justify-content:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="top">
+      <div class="brand">
+        <div class="title">There Is Nothing There</div>
+        <div class="sub">A slow-burn psychological horror about returning to a familiar place that no longer agrees with your memory.</div>
+      </div>
+
+      <div class="ctaRow">
+        <a class="btn btnPrimary" href="STEAM_URL" target="_blank" rel="noopener">Wishlist on Steam</a>
+        <a class="btn" href="#screens">Screens</a>
+        <a class="btn" href="#press">Press</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1 class="hook">Return to the apartment.<br><span>Notice what changes.</span></h1>
+      <p class="lead">
+        Routine becomes unreliable. Conversations loop. Rooms feel slightly wrong.
+        You’re not hunting a monster — you’re watching your own reality fray.
+      </p>
+
+      <div class="panel">
+        <div class="video" aria-label="Trailer">
+          <!-- Option A: YouTube embed -->
+          <iframe
+            src="https://www.youtube.com/embed/YOUTUBE_ID?rel=0&modestbranding=1"
+            title="Trailer"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+
+          <!-- Option B: self-hosted mp4 (uncomment if you prefer) -->
+          <!--
+          <video controls playsinline preload="metadata" poster="assets/capsule.jpg">
+            <source src="assets/trailer.mp4" type="video/mp4" />
+          </video>
+          -->
+        </div>
+
+        <div class="bar">
+          <div class="mini">Psychological horror • Environmental storytelling • Ambiguous narrative</div>
+          <a class="btn btnPrimary" href="STEAM_URL" target="_blank" rel="noopener">Wishlist on Steam</a>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>What it is</h3>
+          <p>Slow dread, not constant chase. Fear builds through repetition, silence, and small inconsistencies.</p>
+        </div>
+        <div class="card">
+          <h3>What to expect</h3>
+          <p>Environmental narrative, fragmented dialogue, and moments that feel “almost normal” until they don’t.</p>
+        </div>
+      </div>
+
+      <div id="screens" class="shots" aria-label="Screenshots">
+        <div class="shot"><img src="assets/s1.png" alt="Screenshot 1"></div>
+        <div class="shot"><img src="assets/s2.png" alt="Screenshot 2"></div>
+        <div class="shot"><img src="assets/s3.png" alt="Screenshot 3"></div>
+        <div class="shot"><img src="assets/s4.png" alt="Screenshot 4"></div>
+      </div>
+
+      <div id="press" class="footer">
+        <div class="fine">
+          Content warning: psychological distress, anxiety-inducing imagery, themes of dissociation and memory instability.
+        </div>
+        <div>
+          <a class="btn" href="STEAM_URL" target="_blank" rel="noopener">Steam</a>
+          <!-- Optional: link a simple presskit PDF or Google Drive -->
+          <!-- <a class="btn" href="PRESSKIT_URL" target="_blank" rel="noopener">Presskit</a> -->
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+</body>
+</html>
