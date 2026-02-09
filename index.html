@@ -7,7 +7,7 @@
   <title>There Is Nothing There — Psychological Horror</title>
   <meta name="description" content="A slow-burn psychological horror about returning to a familiar place that no longer agrees with your memory." />
 
-  <!-- Favicon (must be in repo root if you keep this path) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <meta property="og:title" content="There Is Nothing There" />
@@ -55,8 +55,8 @@
 
     .brand{display:flex; flex-direction:column; gap:6px;}
 
-    .title{font-size:24px;}
-    .sub{color:var(--muted); font-size:13px;}
+    .title{font-size:26px;}
+    .sub{color:var(--muted); font-size:14px;}
 
     .ctaRow{display:flex; gap:10px; flex-wrap:wrap;}
 
@@ -66,7 +66,7 @@
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
       text-decoration:none;
-      font-size:14px;
+      font-size:15px;
       transition:.12s;
     }
 
@@ -79,10 +79,15 @@
 
     .hero{padding-top:32px; display:grid; gap:18px;}
 
-    .hook{font-size:34px; margin:0;}
+    .hook{font-size:38px; margin:0;}
     .hook span{color:var(--accent);}
 
-    .lead{color:var(--muted); max-width:70ch;}
+    .lead{
+      color:var(--muted);
+      max-width:70ch;
+      font-size:16.5px;
+      line-height:1.6;
+    }
 
     .panel{
       border:1px solid var(--line);
@@ -112,21 +117,6 @@
       border-top:1px solid var(--line);
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:12px;
-      margin-top:18px;
-    }
-
-    .card{
-      grid-column:span 6;
-      padding:16px;
-      border-radius:var(--radius);
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.02);
-    }
-
     .shots{
       margin-top:20px;
       display:grid;
@@ -150,8 +140,8 @@
     }
 
     @media(max-width:760px){
-      .shot,.card{grid-column:span 12}
-      .hook{font-size:28px}
+      .shot{grid-column:span 12}
+      .hook{font-size:30px;}
     }
   </style>
 </head>
@@ -177,7 +167,9 @@
   <h1 class="hook">Return to the apartment.<br><span>Notice what changes.</span></h1>
 
   <p class="lead">
-    A single developer’s debut psychological horror about returning to a familiar place that no longer feels right. Explore and observe freely, but remember — your actions will matter.
+    A single developer’s debut psychological horror about returning to a familiar place that no longer feels right.
+    Explore and observe freely, but remember — your actions will matter.
+  </p>
 
   <div class="panel">
     <div class="video">
@@ -195,8 +187,6 @@
   </div>
 
   <div id="screens" class="shots">
-
-    <!-- EXACT filenames from repo -->
 
     <div class="shot">
       <img src="s1.png" alt="Screenshot 1">
