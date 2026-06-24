@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,7 +8,6 @@
   <title>There Is Nothing There — Psychological Horror</title>
   <meta name="description" content="A slow-burn psychological horror about growing up, ambition, and searching for purpose in an unstable world." />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <meta property="og:title" content="There Is Nothing There" />
@@ -23,7 +23,7 @@
       --line:rgba(255,255,255,.10);
       --accent:#f2d46b;
       --radius:18px;
-      --max: 980px;
+      --max:980px;
     }
 
     *{box-sizing:border-box}
@@ -31,7 +31,7 @@
 
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       background:
         radial-gradient(1200px 700px at 20% 0%, rgba(255,255,255,.06), transparent 60%),
         radial-gradient(900px 500px at 90% 10%, rgba(242,212,107,.06), transparent 55%),
@@ -41,7 +41,11 @@
 
     a{color:inherit}
 
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 70px;}
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 18px 70px;
+    }
 
     .top{
       display:flex;
@@ -52,7 +56,11 @@
       border-bottom:1px solid var(--line);
     }
 
-    .brand{display:flex; flex-direction:column; gap:6px;}
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
 
     .title{
       font-size:26px;
@@ -60,7 +68,11 @@
       color:#d84a4a;
     }
 
-    .ctaRow{display:flex; gap:10px; flex-wrap:wrap;}
+    .ctaRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
 
     .btn{
       padding:10px 14px;
@@ -72,17 +84,29 @@
       transition:.12s;
     }
 
-    .btn:hover{background:rgba(255,255,255,.07)}
+    .btn:hover{
+      background:rgba(255,255,255,.07);
+    }
 
     .btnPrimary{
       background:rgba(242,212,107,.16);
       border-color:rgba(242,212,107,.4);
     }
 
-    .hero{padding-top:32px; display:grid; gap:18px;}
+    .hero{
+      padding-top:32px;
+      display:grid;
+      gap:18px;
+    }
 
-    .hook{font-size:38px; margin:0;}
-    .hook span{color:var(--accent);}
+    .hook{
+      font-size:38px;
+      margin:0;
+    }
+
+    .hook span{
+      color:var(--accent);
+    }
 
     .lead{
       color:var(--muted);
@@ -143,9 +167,32 @@
       object-fit:cover;
     }
 
+    .footer{
+      margin-top:40px;
+      padding-top:20px;
+      border-top:1px solid var(--line);
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .footer a{
+      color:var(--text);
+      text-decoration:none;
+    }
+
+    .footer a:hover{
+      text-decoration:underline;
+    }
+
     @media(max-width:760px){
-      .shot{grid-column:span 12}
-      .hook{font-size:30px;}
+      .shot{
+        grid-column:span 12;
+      }
+
+      .hook{
+        font-size:30px;
+      }
     }
   </style>
 </head>
@@ -168,12 +215,15 @@
 
 <section class="hero">
 
-  <h1 class="hook">Return to the apartment.<br><span>Notice what changes.</span></h1>
+  <h1 class="hook">
+    Return to the apartment.<br>
+    <span>Notice what changes.</span>
+  </h1>
 
   <p class="lead">
-    There Is Nothing There is a psychological horror game about growing up, ambition, 
-    and searching for purpose in a world that feels increasingly unstable. 
-    Explore, observe, and question what you see.
+    There Is Nothing There is a psychological horror game about growing up,
+    ambition, and searching for purpose in a world that feels increasingly
+    unstable. Explore, observe, and question what you see.
   </p>
 
   <div class="panel">
@@ -187,8 +237,14 @@
     </div>
 
     <div class="bar">
-      <div>Psychological horror • Environmental storytelling • Atmospheric • Immersive • First-Person</div>
-      <a class="btn btnPrimary" href="YOUR_STEAM_URL_HERE" target="_blank">Wishlist</a>
+      <div>
+        Psychological horror • Environmental storytelling • Atmospheric •
+        Immersive • First-Person
+      </div>
+
+      <a class="btn btnPrimary" href="YOUR_STEAM_URL_HERE" target="_blank">
+        Wishlist
+      </a>
     </div>
   </div>
 
@@ -214,7 +270,13 @@
 
 </section>
 
+<footer class="footer">
+  Contact developer with any questions:
+  <a href="mailto:pis2009@nyu.edu">pis2009@nyu.edu</a>
+</footer>
+
 </div>
 
 </body>
 </html>
+```
